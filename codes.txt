@@ -1,0 +1,13 @@
+/**
+ * Errors codes:
+ * -1  - unspecified error
+ * 0   - OK (no errors)
+ * 100 - amount of parameters is less then 3
+ * 101 - amount of parameters is more then 3
+ */
+
+ /**
+  * Return codes:
+  * 102 - no such file;
+  * 103 - file exist;
+  */

@@ -9,7 +9,7 @@ int chck_fln(const char *fln);
 
 void create_file(const char *fln);
 
-const char *f_rnm(const char *fln, int mode);
+const char *f_rnm(const char *file_name, int mode);
 
 const char *flrnm(const char *fln);
 

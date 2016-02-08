@@ -11,7 +11,7 @@ int main(int argc, char ** argv) {
     create_file(argv[3]);   // Create new file;
 
     //f_rnm();
-    flrnm(argv[3]);
+    //flrnm(argv[3]);
 
 
 

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include "../headers/rnd.h"
 
-void create_file(const char *fln) {
+void create_file(const char * fln) {
     int fd;
     int ext;
     const char * tmp = NULL;
@@ -35,6 +35,7 @@ void create_file(const char *fln) {
 
     //ext = chck_fln(tmp);
 
-    fd = open (tmp, S_IRUSR | S_IWUSR | O_CREAT); // fd = creat(tmp, S_IRUSR | S_IWUSR);
+     fd = creat(tmp, S_IRUSR | S_IWUSR | O_CREAT); // fd = open (tmp, S_IRUSR | S_IWUSR | O_CREAT);
+
     printf("Created file descriptor: %i \n", fd);
 }

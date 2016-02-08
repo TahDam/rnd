@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 int chck_fln(const char *fln) {
+    //const char * tmp = fln;
     int fd;
     int ext;
 
@@ -20,7 +21,7 @@ int chck_fln(const char *fln) {
     if (fd == -1) ext = 102;
     else ext = 103;
 
-    printf("chck_fln: %i \n", ext); // TODO: Delete after testing
+    //printf("chck_fln: %i \n", ext); // TODO: Delete after testing
 
     return ext;
 }

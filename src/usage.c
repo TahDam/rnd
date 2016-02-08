@@ -32,7 +32,5 @@ int usage(int argc) {
         error_code = -1;
     }
 
-    printf("Error code: %i \n", error_code); /* TODO: Delete after testing */
-
     return error_code;
 }

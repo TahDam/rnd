@@ -15,4 +15,6 @@ int usage(int argc);
 
 char * rnd_gen(int rnd_num, int rnd_max);
 
+void rec(int fd, char *seq);
+
 #endif //RND_RND_H

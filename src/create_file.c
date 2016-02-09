@@ -32,7 +32,7 @@ int create_file(const char *fln) {
     }
 
     fd = creat(tmp, S_IRUSR | S_IWUSR | O_CREAT);
-    close(fd);
+    //close(fd);
 
     return fd;
 }

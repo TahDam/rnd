@@ -23,11 +23,15 @@ char * rnd_gen(int rnd_num, int rnd_max) {
 
     sequence[strlen(sequence)+1]=0x00;
 
+    /*
+
     //region TODO: Delete after testing
     for (int j = 0; j < strlen(sequence); ++j) {
         printf("%i:>> %i \n", j, sequence[j]);
     }
     //endregion
+
+    */
 
     return sequence;
 }

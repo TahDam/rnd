@@ -12,19 +12,25 @@
 
 void rec(int fd, char *seq) {
 
-    struct iovec input[strlen(seq)];
+    char * tmp = "Here is some text...";
+
+    struct iovec input[1];
 
 
-    for (int i=0; i<strlen(seq); i++) {
-        input[i].iov_base = (void *) seq[i];
-        input[i].iov_len = strlen((const char *) seq[i]);
+
+        input[0].iov_base = tmp;
+        input[0].iov_len = strlen(tmp);
+
+    printf("iov.base = %c\n", input->iov_base);
+
+
+/*
+    for (int j=0; j<input->iov_len; j++) {
+        printf("iov.base = %c\n", (char) input[j].iov_base);
     }
-
-    for (int j=0; j<strlen(input); j++) {
-        printf("iov.base = %c", (char) input[j].iov_base);
-    }
+*/
 
 
-    writev(fd, input, (int) strlen(seq));
+    writev(fd, input, (int) strlen(tmp));
     close(fd);
 }

@@ -7,12 +7,12 @@
 
 int chck_fln(const char *fln);
 
-void create_file(const char *fln);
+int create_file(const char *fln);
 
 const char *f_rnm(const char *file_name, int mode);
 
-const char *flrnm(const char *fln);
-
 int usage(int argc);
+
+char * rnd_gen(int rnd_num, int rnd_max);
 
 #endif //RND_RND_H

@@ -5,9 +5,10 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <unistd.h>
 #include "../headers/rnd.h"
 
-void create_file(const char * fln) {
+int create_file(const char *fln) {
     int fd;
     int ext;
     const char * tmp = NULL;
@@ -30,7 +31,8 @@ void create_file(const char * fln) {
         ext = chck_fln(tmp);
     }
 
-     fd = creat(tmp, S_IRUSR | S_IWUSR | O_CREAT);
+    fd = creat(tmp, S_IRUSR | S_IWUSR | O_CREAT);
+    close(fd);
 
-    printf("Created file descriptor: %i \n", fd);
+    return fd;
 }

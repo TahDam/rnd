@@ -12,25 +12,6 @@
 
 void rec(int fd, char *seq) {
 
-    char * tmp = "Here is some text...";
+    write(fd, seq, strlen(seq));
 
-    struct iovec input[1];
-
-
-
-        input[0].iov_base = tmp;
-        input[0].iov_len = strlen(tmp);
-
-    printf("iov.base = %c\n", input->iov_base);
-
-
-/*
-    for (int j=0; j<input->iov_len; j++) {
-        printf("iov.base = %c\n", (char) input[j].iov_base);
-    }
-*/
-
-
-    writev(fd, input, (int) strlen(tmp));
-    close(fd);
 }

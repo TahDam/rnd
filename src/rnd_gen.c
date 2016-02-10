@@ -15,10 +15,12 @@ char * rnd_gen(int rnd_num, int rnd_max) {
     int curRndNum;
 
 
-    for (int i = 0; i < rnd_num; ++i) {
+    for (int i = 0; i < rnd_num; i+=2) {
         curRndNum = (rand() % rnd_max);
-        strcat(sequence, (char *) &curRndNum);
-        strcat(sequence, ", ");
+        sequence[i]= (char) (curRndNum + '0'); // <--- This is really work :)
+        sequence[i+1] = ',';
+        //strcat(sequence, &curRndNum);
+        //strcat(sequence, ",");
     }
 
     sequence[strlen(sequence)+1]=0x00;
